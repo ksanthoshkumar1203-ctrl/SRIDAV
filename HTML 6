@@ -1,0 +1,7 @@
+let sports = document.querySelector('input[name="sports"]:checked');
+
+if (sports) {
+    sports = sports.value;
+} else {
+    sports = "Not Selected";
+}
