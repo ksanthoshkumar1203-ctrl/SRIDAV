@@ -1,0 +1,391 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Internship Skill Matcher</title>
+
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            background: #f2f5f9;
+            margin: 0;
+            padding: 0;
+        }
+
+        .container {
+            width: 90%;
+            max-width: 600px;
+            margin: 50px auto;
+            background: white;
+            padding: 30px;
+            border-radius: 15px;
+            box-shadow: 0 5px 20px rgba(0,0,0,0.15);
+        }
+
+        h1 {
+            text-align: center;
+            color: #2563eb;
+        }
+
+        label {
+            font-weight: bold;
+            display: block;
+            margin-top: 20px;
+        }
+
+        input {
+            width: 100%;
+            padding: 12px;
+            margin-top: 8px;
+            border: 1px solid #ccc;
+            border-radius: 8px;
+            box-sizing: border-box;
+        }
+
+        button {
+            width: 100%;
+            padding: 13px;
+            margin-top: 25px;
+            background: #2563eb;
+            color: white;
+            border: none;
+            border-radius: 8px;
+            font-size: 16px;
+            cursor: pointer;
+        }
+
+        button:hover {
+            background: #1d4ed8;
+        }
+
+        #result {
+            margin-top: 25px;
+            padding: 15px;
+            background: #eef4ff;
+            border-radius: 8px;
+            display: none;
+        }
+    </style>
+</head>
+
+<body>
+
+<div class="container">
+
+    <h1>Internship Skill Matcher</h1>
+
+    <label>Student Name</label>
+    <input type="text" id="name" placeholder="Enter your name">
+
+    <label>Enter Your Skills</label>
+    <input type="text" id="skills"
+           placeholder="Example: Python, SQL, HTML">
+
+    <button onclick="findInternship()">Find Internship</button>
+
+    <div id="result"></div>
+
+</div>
+
+<script>
+function findInternship() {
+
+    let name = document.getElementById("name").value;
+    let skills = document.getElementById("skills").value.toLowerCase();
+
+    let internship = "";
+    let match = 0;
+
+    if (skills.includes("python") && skills.includes("sql")) {
+        internship = "Data Analyst Internship";
+        match = 90;
+    }
+    else if (skills.includes("python")) {
+        internship = "Python Developer Internship";
+        match = 80;
+    }
+    else if (skills.includes("html") && skills.includes("css")) {
+        internship = "Web Developer Internship";
+        match = 85;
+    }
+    else {
+        internship = "General IT Internship";
+        match = 50;
+    }
+
+    let result = document.getElementById("result");
+
+    result.style.display = "block";
+
+    result.innerHTML =
+        "<h3>Hello " + name + "!</h3>" +
+        "<p><b>Recommended Internship:</b> " +
+        internship + "</p>" +
+        "<p><b>Skill Match:</b> " +
+        match + "%</p>";
+}
+</script>
+
+</body>
+</html><!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Internship Skill Matcher</title>
+
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            background: #f2f5f9;
+            margin: 0;
+            padding: 0;
+        }
+
+        .container {
+            width: 90%;
+            max-width: 600px;
+            margin: 50px auto;
+            background: white;
+            padding: 30px;
+            border-radius: 15px;
+            box-shadow: 0 5px 20px rgba(0,0,0,0.15);
+        }
+
+        h1 {
+            text-align: center;
+            color: #2563eb;
+        }
+
+        label {
+            font-weight: bold;
+            display: block;
+            margin-top: 20px;
+        }
+
+        input {
+            width: 100%;
+            padding: 12px;
+            margin-top: 8px;
+            border: 1px solid #ccc;
+            border-radius: 8px;
+            box-sizing: border-box;
+        }
+
+        button {
+            width: 100%;
+            padding: 13px;
+            margin-top: 25px;
+            background: #2563eb;
+            color: white;
+            border: none;
+            border-radius: 8px;
+            font-size: 16px;
+            cursor: pointer;
+        }
+
+        button:hover {
+            background: #1d4ed8;
+        }
+
+        #result {
+            margin-top: 25px;
+            padding: 15px;
+            background: #eef4ff;
+            border-radius: 8px;
+            display: none;
+        }
+    </style>
+</head>
+
+<body>
+
+<div class="container">
+
+    <h1>Internship Skill Matcher</h1>
+
+    <label>Student Name</label>
+    <input type="text" id="name" placeholder="Enter your name">
+
+    <label>Enter Your Skills</label>
+    <input type="text" id="skills"
+           placeholder="Example: Python, SQL, HTML">
+
+    <button onclick="findInternship()">Find Internship</button>
+
+    <div id="result"></div>
+
+</div>
+
+<script>
+function findInternship() {
+
+    let name = document.getElementById("name").value;
+    let skills = document.getElementById("skills").value.toLowerCase();
+
+    let internship = "";
+    let match = 0;
+
+    if (skills.includes("python") && skills.includes("sql")) {
+        internship = "Data Analyst Internship";
+        match = 90;
+    }
+    else if (skills.includes("python")) {
+        internship = "Python Developer Internship";
+        match = 80;
+    }
+    else if (skills.includes("html") && skills.includes("css")) {
+        internship = "Web Developer Internship";
+        match = 85;
+    }
+    else {
+        internship = "General IT Internship";
+        match = 50;
+    }
+
+    let result = document.getElementById("result");
+
+    result.style.display = "block";
+
+    result.innerHTML =
+        "<h3>Hello " + name + "!</h3>" +
+        "<p><b>Recommended Internship:</b> " +
+        internship + "</p>" +
+        "<p><b>Skill Match:</b> " +
+        match + "%</p>";
+}
+</script>
+
+</body>
+</html><!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Internship Skill Matcher</title>
+
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            background: #f2f5f9;
+            margin: 0;
+            padding: 0;
+        }
+
+        .container {
+            width: 90%;
+            max-width: 600px;
+            margin: 50px auto;
+            background: white;
+            padding: 30px;
+            border-radius: 15px;
+            box-shadow: 0 5px 20px rgba(0,0,0,0.15);
+        }
+
+        h1 {
+            text-align: center;
+            color: #2563eb;
+        }
+
+        label {
+            font-weight: bold;
+            display: block;
+            margin-top: 20px;
+        }
+
+        input {
+            width: 100%;
+            padding: 12px;
+            margin-top: 8px;
+            border: 1px solid #ccc;
+            border-radius: 8px;
+            box-sizing: border-box;
+        }
+
+        button {
+            width: 100%;
+            padding: 13px;
+            margin-top: 25px;
+            background: #2563eb;
+            color: white;
+            border: none;
+            border-radius: 8px;
+            font-size: 16px;
+            cursor: pointer;
+        }
+
+        button:hover {
+            background: #1d4ed8;
+        }
+
+        #result {
+            margin-top: 25px;
+            padding: 15px;
+            background: #eef4ff;
+            border-radius: 8px;
+            display: none;
+        }
+    </style>
+</head>
+
+<body>
+
+<div class="container">
+
+    <h1>Internship Skill Matcher</h1>
+
+    <label>Student Name</label>
+    <input type="text" id="name" placeholder="Enter your name">
+
+    <label>Enter Your Skills</label>
+    <input type="text" id="skills"
+           placeholder="Example: Python, SQL, HTML">
+
+    <button onclick="findInternship()">Find Internship</button>
+
+    <div id="result"></div>
+
+</div>
+
+<script>
+function findInternship() {
+
+    let name = document.getElementById("name").value;
+    let skills = document.getElementById("skills").value.toLowerCase();
+
+    let internship = "";
+    let match = 0;
+
+    if (skills.includes("python") && skills.includes("sql")) {
+        internship = "Data Analyst Internship";
+        match = 90;
+    }
+    else if (skills.includes("python")) {
+        internship = "Python Developer Internship";
+        match = 80;
+    }
+    else if (skills.includes("html") && skills.includes("css")) {
+        internship = "Web Developer Internship";
+        match = 85;
+    }
+    else {
+        internship = "General IT Internship";
+        match = 50;
+    }
+
+    let result = document.getElementById("result");
+
+    result.style.display = "block";
+
+    result.innerHTML =
+        "<h3>Hello " + name + "!</h3>" +
+        "<p><b>Recommended Internship:</b> " +
+        internship + "</p>" +
+        "<p><b>Skill Match:</b> " +
+        match + "%</p>";
+}
+</script>
+
+</body>
+</html>
