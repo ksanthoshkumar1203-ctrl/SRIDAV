@@ -1,0 +1,301 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Internship Skill Matcher</title>
+
+    <style>
+        body {
+            font-family: Arial;
+            background: #f2f5f9;
+        }
+
+        .container {
+            width: 500px;
+            margin: 40px auto;
+            background: white;
+            padding: 30px;
+            border-radius: 15px;
+            box-shadow: 0 5px 15px gray;
+        }
+
+        h1 {
+            text-align: center;
+            color: #2563eb;
+        }
+
+        label {
+            font-weight: bold;
+            display: block;
+            margin-top: 15px;
+        }
+
+        input {
+            width: 100%;
+            padding: 10px;
+            margin-top: 5px;
+            box-sizing: border-box;
+            border: 1px solid #ccc;
+            border-radius: 7px;
+        }
+
+        button {
+            width: 100%;
+            padding: 12px;
+            margin-top: 20px;
+            background: #2563eb;
+            color: white;
+            border: none;
+            border-radius: 7px;
+            font-size: 16px;
+        }
+
+        #result {
+            margin-top: 20px;
+            padding: 15px;
+            background: #eef4ff;
+            border-radius: 8px;
+            display: none;
+        }
+    </style>
+</head>
+
+<body>
+
+<div class="container">
+
+    <h1>Internship Skill Matcher</h1>
+
+    <label>Student Name</label>
+    <input type="text" id="name" placeholder="Enter your name">
+
+    <label>10th Mark (%)</label>
+    <input type="number" id="mark10" placeholder="Enter 10th mark">
+
+    <label>12th Mark (%)</label>
+    <input type="number" id="mark12" placeholder="Enter 12th mark">
+
+    <label>College Name</label>
+    <input type="text" id="college" placeholder="Enter college name">
+
+    <label>Skills</label>
+    <input type="text" id="skills"
+           placeholder="Example: Python, SQL, HTML">
+
+    <label>Hobby</label>
+    <input type="text" id="hobby" placeholder="Enter your hobby">
+
+    <label>Expected Salary</label>
+    <input type="number" id="salary"
+           placeholder="Enter expected salary">
+
+    <button onclick="findInternship()">Find Internship</button>
+
+    <div id="result"></div>
+
+</div>
+
+<script>
+
+function findInternship() {
+
+    let name = document.getElementById("name").value;
+    let mark10 = document.getElementById("mark10").value;
+    let mark12 = document.getElementById("mark12").value;
+    let college = document.getElementById("college").value;
+    let skills = document.getElementById("skills").value.toLowerCase();
+    let hobby = document.getElementById("hobby").value;
+    let salary = document.getElementById("salary").value;
+
+    let internship = "";
+    let match = 0;
+
+    if (skills.includes("python") && skills.includes("sql")) {
+        internship = "Data Analyst Internship";
+        match = 90;
+    }
+    else if (skills.includes("python")) {
+        internship = "Python Developer Internship";
+        match = 80;
+    }
+    else if (skills.includes("html") && skills.includes("css")) {
+        internship = "Web Developer Internship";
+        match = 85;
+    }
+    else {
+        internship = "General IT Internship";
+        match = 50;
+    }
+
+    let result = document.getElementById("result");
+
+    result.style.display = "block";
+
+    result.innerHTML =
+        "<h3>Student Details</h3>" +
+        "<p><b>Name:</b> " + name + "</p>" +
+        "<p><b>10th Mark:</b> " + mark10 + "%</p>" +
+        "<p><b>12th Mark:</b> " + mark12 + "%</p>" +
+        "<p><b>College:</b> " + college + "</p>" +
+        "<p><b>Hobby:</b> " + hobby + "</p>" +
+        "<p><b>Expected Salary:</b> ₹" + salary + "</p>" +
+        "<hr>" +
+        "<p><b>Recommended Internship:</b> " +
+        internship + "</p>" +
+        "<p><b>Skill Match:</b> " +
+        match + "%</p>";
+}
+
+</script>
+
+</body>
+</html><!DOCTYPE html>
+<html>
+<head>
+    <title>Internship Skill Matcher</title>
+
+    <style>
+        body {
+            font-family: Arial;
+            background: #f2f5f9;
+        }
+
+        .container {
+            width: 500px;
+            margin: 40px auto;
+            background: white;
+            padding: 30px;
+            border-radius: 15px;
+            box-shadow: 0 5px 15px gray;
+        }
+
+        h1 {
+            text-align: center;
+            color: #2563eb;
+        }
+
+        label {
+            font-weight: bold;
+            display: block;
+            margin-top: 15px;
+        }
+
+        input {
+            width: 100%;
+            padding: 10px;
+            margin-top: 5px;
+            box-sizing: border-box;
+            border: 1px solid #ccc;
+            border-radius: 7px;
+        }
+
+        button {
+            width: 100%;
+            padding: 12px;
+            margin-top: 20px;
+            background: #2563eb;
+            color: white;
+            border: none;
+            border-radius: 7px;
+            font-size: 16px;
+        }
+
+        #result {
+            margin-top: 20px;
+            padding: 15px;
+            background: #eef4ff;
+            border-radius: 8px;
+            display: none;
+        }
+    </style>
+</head>
+
+<body>
+
+<div class="container">
+
+    <h1>Internship Skill Matcher</h1>
+
+    <label>Student Name</label>
+    <input type="text" id="name" placeholder="Enter your name">
+
+    <label>10th Mark (%)</label>
+    <input type="number" id="mark10" placeholder="Enter 10th mark">
+
+    <label>12th Mark (%)</label>
+    <input type="number" id="mark12" placeholder="Enter 12th mark">
+
+    <label>College Name</label>
+    <input type="text" id="college" placeholder="Enter college name">
+
+    <label>Skills</label>
+    <input type="text" id="skills"
+           placeholder="Example: Python, SQL, HTML">
+
+    <label>Hobby</label>
+    <input type="text" id="hobby" placeholder="Enter your hobby">
+
+    <label>Expected Salary</label>
+    <input type="number" id="salary"
+           placeholder="Enter expected salary">
+
+    <button onclick="findInternship()">Find Internship</button>
+
+    <div id="result"></div>
+
+</div>
+
+<script>
+
+function findInternship() {
+
+    let name = document.getElementById("name").value;
+    let mark10 = document.getElementById("mark10").value;
+    let mark12 = document.getElementById("mark12").value;
+    let college = document.getElementById("college").value;
+    let skills = document.getElementById("skills").value.toLowerCase();
+    let hobby = document.getElementById("hobby").value;
+    let salary = document.getElementById("salary").value;
+
+    let internship = "";
+    let match = 0;
+
+    if (skills.includes("python") && skills.includes("sql")) {
+        internship = "Data Analyst Internship";
+        match = 90;
+    }
+    else if (skills.includes("python")) {
+        internship = "Python Developer Internship";
+        match = 80;
+    }
+    else if (skills.includes("html") && skills.includes("css")) {
+        internship = "Web Developer Internship";
+        match = 85;
+    }
+    else {
+        internship = "General IT Internship";
+        match = 50;
+    }
+
+    let result = document.getElementById("result");
+
+    result.style.display = "block";
+
+    result.innerHTML =
+        "<h3>Student Details</h3>" +
+        "<p><b>Name:</b> " + name + "</p>" +
+        "<p><b>10th Mark:</b> " + mark10 + "%</p>" +
+        "<p><b>12th Mark:</b> " + mark12 + "%</p>" +
+        "<p><b>College:</b> " + college + "</p>" +
+        "<p><b>Hobby:</b> " + hobby + "</p>" +
+        "<p><b>Expected Salary:</b> ₹" + salary + "</p>" +
+        "<hr>" +
+        "<p><b>Recommended Internship:</b> " +
+        internship + "</p>" +
+        "<p><b>Skill Match:</b> " +
+        match + "%</p>";
+}
+
+</script>
+
+</body>
+</html>
