@@ -1,0 +1,7 @@
+<label>Sports Interested</label>
+
+<input type="radio" name="sports" id="sportsYes" value="Yes">
+<label for="sportsYes">Yes</label>
+
+<input type="radio" name="sports" id="sportsNo" value="No">
+<label for="sportsNo">No</label>
