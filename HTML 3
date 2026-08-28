@@ -1,0 +1,7 @@
+let hobby = document.getElementById("hobby").value;
+
+result.innerHTML =
+    "<h3>Hello " + name + "!</h3>" +
+    "<p><b>Hobby:</b> " + hobby + "</p>" +
+    "<p><b>Recommended Internship:</b> " + internship + "</p>" +
+    "<p><b>Skill Match:</b> " + match + "%</p>";
