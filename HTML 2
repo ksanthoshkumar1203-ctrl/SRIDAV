@@ -1,0 +1,2 @@
+<label>Hobby</label>
+<input type="text" id="hobby" placeholder="Enter your hobby">
